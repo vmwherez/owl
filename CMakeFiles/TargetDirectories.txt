@@ -1,3 +1,0 @@
-/Users/mvm/Library/Mobile Documents/iCloud~md~obsidian/Documents/notes/owl/CMakeFiles/hello.dir
-/Users/mvm/Library/Mobile Documents/iCloud~md~obsidian/Documents/notes/owl/CMakeFiles/edit_cache.dir
-/Users/mvm/Library/Mobile Documents/iCloud~md~obsidian/Documents/notes/owl/CMakeFiles/rebuild_cache.dir

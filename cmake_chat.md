@@ -2,7 +2,7 @@
 
 Sure, let's get started with setting up a simple project using CMake. Here are the basic steps:
 
-1. **Create a Project Directory:** Start by creating a directory for your project. You can name it whatever you like.
+	1. **Create a Project Directory:** Start by creating a directory for your project. You can name it whatever you like.
 
 2. **Create Source Files:** Inside your project directory, create the source code files for your project. For example, you can have a `main.cpp` file.
 
