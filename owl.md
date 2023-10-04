@@ -1,5 +1,134 @@
 # 🦉
 
+# `2023-10-04`
+
+`11:02a` **`git rm <path-to-submodule>`**
+
+`10:51a` Organizing this repo to run against `peregrine`. Working on UI in `peregrine.`
+
+`7:15a` [[crisis_in_science]]
+
+- https://news.ycombinator.com/item?id=37756570
+- https://www.wsj.com/articles/how-preapproved-narratives-corrupt-science-false-studies-covid-climate-change-5bee0844
+## `2023-10-03`
+
+
+#### `2:07p`
+
+Putting timed entries here will make this more like a feed. 
+
+> What about converting this markdown into JSON into reddit or something.
+#### `12:26p`
+
+- `notes` cd into notes and vim
+- `peregrine` take me to peregrine app folder
+#### `10:12a`
+
+- https://zod.dev/?id=basic-usage
+- https://create-react-app.dev/docs/adding-typescript/
+- https://headlessui.com 
+- https://github.com/typescript-cheatsheets/react#reacttypescript-cheatsheets
+- https://react-typescript-cheatsheet.netlify.app/docs/basic/setup
+- https://create-react-app.dev/docs/adding-typescript/
+
+`9:36a`
+
+```
+✗ npx tailwindcss init
+
+
+Created Tailwind CSS config file: tailwind.config.js
+```
+
+
+## `2023-10-02`
+
+
+
+
+
+#### react & go
+
+`~12p` 
+
+- https://learngolangonline.com/posts/golang-roadmap#resources-to-learn-gogolang
+
+![[golang_concept_map.png]]
+
+#### tikz in jupyter
+
+`9:07a` *Getting `tikz `into Jupyter*
+- https://dvisvgm.de/Downloads/
+
+`9:49a` Kind of fun going down the rabbit hole with TeX here in Norlan Stacks.
+
+https://www.ctan.org/pkg/kpathsea
+
+```
+(base) ➜  dvisvgm-3.1.1 which dvisvgm
+/Library/TeX/texbin/dvisvgm
+```
+
+I didn't need to build again from source, I vaguely recall these feels when I was installing MacTex, which I remember being huge.
+	- https://www.latex-project.org/get/ 
+	- https://en.wikipedia.org/wiki/TeX_Live
+
+So, this tool was already installed. 
+
+`10:32a` I looked at the source code for a *texmagic* and saw it was using `convert` which was an alias for *ImageMagick*... 
+So of all things, ended up installing that on the 2015 here.
+
+- https://imagemagick.org/script/download.php#macosx
+
+```
+export MAGICK_HOME="$HOME/ImageMagick-7.0.10"
+export PATH="$MAGICK_HOME/bin:$PATH"
+export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"
+```
+
+That involved allowing the libraries to run in System Preferences a bunch. 
+
+`11:05` Went back to https://github.com/mkrphys/ipython-tikzmagic and http://cityinthesky.co.uk/opensource/pdf2svg/
+
+I had deleted pdf2svg and replaced with an alias to dvisgm.
+
+- https://tobywf.com/2018/01/beautiful-svg-diagrams-with-tikz-dvisvgm/
+- https://laurentperrinet.github.io/sciblog/posts/2015-01-20-using-tikzmagic.html
+#latex #tikz #jupyter
+
+
+##  `2023-10-01`
+
+`12:34p`
+
+*Dogs.*
+
+`12:24p`
+
+`xxd | most a.out`
+## `12p`
+
+```sh
+$ r2 /bin/ls   # open file in read-only
+> aaa          # analyse the program (r2 -A)
+> afl          # list all functions (try aflt, aflm)
+> px 32        # print 32 byte hexdump current block
+> s sym.main   # seek to main (using flag name)
+> f~foo        # filter flags matching 'foo' (internal |grep)
+> iS;is        # list sections and symbols (rabin2 -Ss)
+> pdf; agf     # disassembly and ascii-art function graph
+> oo+;w hello  # reopen in read-write and write a string
+> ?*~...       # interactive filter in all command help
+> q            # quit
+```
+
+```
+[0x100003e90]> pd
+```
+
+*Working from iPad: radare2, cmake, vim*
+
+`09:23` http://concurrencyfreaks.blogspot.com/2023/09/50-years-later-is-two-phase-locking.html
 # `2023-09-30`
 
 
@@ -430,6 +559,18 @@ https://mathshistory.st-andrews.ac.uk/Biographies/Cauchy/
 `11:38a` https://jakobs.dev/solving-mnist-with-gzip/
 
 ## `2023-09-18`
+
+`9:18` 4423
+
+Making some progress classifying Signals and Systems math. 
+
+```
+transfer function
+unit step
+Laplace
+Fourier
+Mutual Inductance
+```
 
 `2:43p`
 
@@ -1157,25 +1298,73 @@ https://www.youtube.com/watch?v=MQzG1hfhow4 neural network from scratch
 https://github.com/VikParuchuri/zero_to_gpt/blob/master/explanations/linreg.ipynb
 https://github.com/VikParuchuri/zero_to_gpt/blob/master/explanations/dense.ipynb
 
-# Taylor's Theorem
+## `2023-08-20`
+
+
+
+**Taylor's Theorem**
 
 _And Taylor Series, relating back to logarithms and Euler's number._
 
 - https://en.wikipedia.org/wiki/Taylor%27s_theorem
 - https://en.wikipedia.org/wiki/Taylor_series
 
-## Motivation
+**Motivation**
 
 I want to actually tie this back to the logarithm `ipynb` ... today this is an attempt at how to track ongoing studies day over day.
 
 [[2023-08-20]] _This was one way I had been linking concept documents to journal entries._
 
-## LaTeX for relevant concepts
+LaTeX for relevant concepts:
 
 - https://tex.stackexchange.com/questions/512201/how-to-write-taylors-series-of-sinx-in-pstricks
 - https://www.alanshawn.com/latex3-tutorial/
 - https://www.tug.org/TUGboat/tb24-3/wong.pdf (just for fun, I guess)
+## `2023-08-19`
 
+##### LaTeX for pretty graphs of Taylor Series
+
+- https://tex.stackexchange.com/questions/512201/how-to-write-taylors-series-of-sinx-in-pstricks
+
+`4:20p` Apple support. 
+
+*Apple Pencil was under warranty. That helps a lot.*
+
+# `2023-08-18`
+
+```
+ Taylor Series or Taylor's Theorem 
+- Polynomials
+- Differentiable Function 
+- Differentiation 
+  - Leibinitz notation
+  - Lagrange notation
+- natural logarithm 
+- Euler's number
+```
+## `2023-08-08`
+
+`8:37p` trying to get some other little CLI things going. `viteris`.
+
+https://pastebin.com/gWggYb0a
+
+```
+brew isntall irssi
+/connect irc.scuttled.net
+```
+
+https://irssi.org/documentation/help/connect/
+
+https://quadpoint.org/articles/irssi/
+
+
+
+## `2023-08-02`
+
+```bash
+ echo "---------";env;echo "-----------"
+ alias
+```
 ## `2023-07-08`
 
 - [[2023-07-08#SchemDraw]]
