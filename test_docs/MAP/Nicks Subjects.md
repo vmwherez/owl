@@ -1,0 +1,7 @@
+[[Behavioral Biology]]
+[[Geo politics]]
+[[Sociology]]
+[[Nutrition]]
+[[Linguistics]]
+[[Business]]
+[[History]]

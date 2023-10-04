@@ -1,0 +1,6 @@
+[[Predators]]
+[[Resources]]
+[[Weather]]
+[[Major Disasters]]
+[[Microorganisms]]
+[[Random Change]]

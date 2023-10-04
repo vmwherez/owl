@@ -1,0 +1,225 @@
+<html>
+  <head>
+    <meta http-equiv="refresh" content="3600" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/build/ol.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.2.1/css/ol.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/ol-mapbox-style@6.1.0/dist/olms.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/style.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  </head>
+  <body>
+	  
+    <div class="noaa">
+      <h1 class="open-sans">NOAA WEATHER</h1>
+      <h1 id="temp">Loading...</h1>
+      <div class="tiny">
+        <div id="shortForecast"></div>
+      </div>
+      <div id="radarMap"></div>
+      <div class="tiny">
+        <!-- <div id="icon"></div> -->
+        <div id="radarStation"></div>
+        <div id="city"></div>
+        <div id="coords"></div>
+      </div>
+      <a href="/notes/BACKEND.md">[[ NOTES ]]</a>
+    </div>
+    <div id="map"></div>
+  </body>
+  <script>
+    /**
+	try {     
+    		const response = await fetch('http://localhost:8000/upload', {
+			method: "post",
+        		headers: {
+          				Accept: "application/json",
+          				"Content-Type": "application/json",
+        			 },
+
+        			//make sure to serialize your JSON body
+        			body: JSON.stringify({
+          				info: { data: data },
+        				}),
+      				}).then((response) => {
+        						console.log(response);
+				}) }
+		catch(err) {
+    					console.error(`Error: ${err}`);
+  				}
+		});
+**/
+
+    const coords = document.getElementById("coords");
+    const radarStation = document.getElementById("radarStation");
+    const radarMap = document.getElementById("radarMap");
+    const temp = document.getElementById("temp");
+    const icon = document.getElementById("icon");
+
+    // https://stackoverflow.com/questions/426963/replace-tabs-with-spaces-in-vim
+    // :set tabstop=2 shiftwidth=2 expandtab | retab
+
+    const getLocation = () => {
+      if (navigator.geolocation) {
+        // this API, navigator.geolocation.getCurrentPosition accepts a callback
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        coords.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    };
+
+    const updatePosition = (data) => {
+      fetch("http://localhost:8000/updatePosition", {
+        method: "post",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+
+        //make sure to serialize your JSON body
+        body: JSON.stringify({
+          info: { data: data },
+        }),
+      }).then((response) => {
+        console.log(response);
+        //do something awesome that makes the world a better place
+      });
+    };
+
+    const update = (data) => {
+      fetch("http://localhost:8000/post", {
+        method: "post",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+
+        //make sure to serialize your JSON body
+        body: JSON.stringify({
+          info: { data: data },
+        }),
+      }).then((response) => {
+        console.log(response);
+        //do something awesome that makes the world a better place
+      });
+    };
+
+    const showPosition = (position) => {
+      coords.innerHTML =
+        "Lat: " +
+        position.coords.latitude +
+        "Long: " +
+        position.coords.longitude;
+
+      var map = new ol.Map({
+        target: "map",
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM(),
+          }),
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([
+            position.coords.longitude,
+            position.coords.latitude,
+          ]),
+          zoom: 12, //Initial Zoom Level
+        }),
+      });
+
+      /**
+      const ring = data.geometry.coordinates[0];
+
+      const drawMarker = (longlat) => {
+        var marker = new ol.Feature({
+          geometry: new ol.geom.Point(ol.proj.fromLonLat(longlat)),
+        });
+        var vectorSource = new ol.source.Vector({
+          features: [marker],
+        });
+
+        var markerVectorLayer = new ol.layer.Vector({
+          source: vectorSource,
+        });
+
+        map.addLayer(markerVectorLayer);
+      };
+
+      drawMarker([position.coords.longitude, position.coords.latitude]);
+
+      for (let r in ring) {
+        drawMarker(ring[r]);
+      }
+*/
+      //TODO: error handling, change 'Loading...' to 'ERROR' on error
+      fetch(
+        "https://api.weather.gov/points/" +
+          position.coords.latitude +
+          "," +
+          position.coords.longitude
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          updatePosition(data);
+          radarStation.innerHTML = data.properties.radarStation;
+          radarMap.innerHTML =
+            `<img src="https://radar.weather.gov/ridge/standard/` +
+            data.properties.radarStation +
+            `_loop.gif" />`;
+          city.innerHTML = data.properties.relativeLocation.properties.city;
+
+          const hourlyURL = data.properties.forecastHourly;
+
+          showHourlyForecast = (url) => {
+            fetch(url)
+              .then((response) => response.json())
+              .then((data) => {
+                var temperature = data.properties.periods[0].temperature;
+                update(data.properties.periods[0]);
+                temp.innerHTML = temperature + "&deg";
+                // icon.innerHTML =
+                //   `<img src=` + data.properties.periods[0].icon + `>`;
+                shortForecast.innerHTML =
+                  data.properties.periods[0].shortForecast;
+              });
+          };
+          showHourlyForecast(hourlyURL);
+        });
+    };
+
+    /*
+    periods: Array (156)
+    0 Object
+    detailedForecast: ""
+    endTime: "2023-01-03T13:00:00-06:00"
+    icon: "https://api.weather.gov/icons/land/day/snow,30?size=small"
+    isDaytime: true
+    name: ""
+    number: 1
+    shortForecast: "Chance Light Snow"
+    startTime: "2023-01-03T12:00:00-06:00"
+    temperature: 31
+    temperatureTrend: null
+    temperatureUnit: "F"
+    windDirection: "NW"
+    windSpeed: "14 mph"
+    */
+
+    getLocation();
+  </script>
+</html>

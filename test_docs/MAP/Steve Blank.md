@@ -1,0 +1,1 @@
+https://steveblank.com/tools-and-blogs-for-entrepreneurs/

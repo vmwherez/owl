@@ -1,0 +1,172 @@
+{
+  "main": {
+    "id": "4f548d44e6cb5527",
+    "type": "split",
+    "children": [
+      {
+        "id": "0cf2de67d6466a39",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "10203fc92fa10aab",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8962e0d9c22a0461",
+    "type": "split",
+    "children": [
+      {
+        "id": "11692e057600ef25",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fbd5e267621a6798",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "cec14e678efb24c1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8dc82c3cea2c65c4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "75a6cd7bef2c723a",
+    "type": "split",
+    "children": [
+      {
+        "id": "7cc31d6eba34af17",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6f0170a6b32ef8df",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9d8e323e938ab070",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "aaab371d2d96d099",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "668ca18b62c5b45c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "10203fc92fa10aab",
+  "lastOpenFiles": [
+    "Manufacturing.md",
+    "Behavioral Biology.md",
+    "Business.md",
+    "Cooperation.md",
+    "Group selection.md",
+    "Co evolution.md",
+    "Bad Bacteria.md",
+    "Resource Sharing.md",
+    "Natural Selection.md",
+    "Genetics.md",
+    "Environmental Pressures.md",
+    "Random Change.md",
+    "Resources.md",
+    "Microorganisms.md",
+    "Major Disasters.md",
+    "Weather.md",
+    "Predators.md",
+    "Gene expression.md",
+    "Sexual selection.md",
+    "Evolutionary biology.md",
+    "Epigenetics.md",
+    "Agriculture.md",
+    "Enteric nervous system.md",
+    "Economics.md",
+    "Design.md",
+    "Cognitive impairment.md",
+    "chap01.ipynb",
+    "Untitled.canvas"
+  ]
+}

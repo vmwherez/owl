@@ -1,0 +1,8 @@
+[[Nutrition]]
+[[Good Bacteria]]
+[[Bad Bacteria]]
+[[Gut Mucosal Layer]]
+[[Enteric nervous system]]
+[[Gut brain Axis]]
+[[Bacteriophages]]
+[[Environment]]
