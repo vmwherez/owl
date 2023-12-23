@@ -1,6 +1,41 @@
 # 🦉
 
+# 2023-12-22
+
+`10:30p` 
+
+Something pretty important I had overlooked or forgotten, definite vs indefinite integral:
+
+DEFINITE INTEGRAL
+$$
+\int_{a}^{b}f(x)dx
+$$
+
+INDEFINITE INTEGRAL or *antiderivative*
+Solving this (with say, the Power Rule) might involve adding `C` the *Constant of Integration* which stands for possible values.
+
+$$
+\int f(x)dx
+$$
+
+- [https://devguide.python.org/development-tools/clang/index.html](https://devguide.python.org/development-tools/clang/index.html)
+- [http://shell-storm.org/shellcode/index.html](http://shell-storm.org/shellcode/index.html)
+- [C++ Pointers Explained For Audio Programming](https://www.youtube.com/watch?v=QfjBJo8Igs0)
+- [https://thewolfsound.com/c-plus-plus-pointers-explained-for-audio-programming/](https://thewolfsound.com/c-plus-plus-pointers-explained-for-audio-programming/)
+- [https://thewolfsound.com/data-alignment-in-fir-filter-simd-implementation/](https://thewolfsound.com/data-alignment-in-fir-filter-simd-implementation/)
+- [https://stackoverflow.com/questions/845626/how-is-a-vectors-data-aligned](https://stackoverflow.com/questions/8456236/how-is-a-vectors-data-aligned)
+
+`1:27a` [https://github.com/JanWilczek/audio-plugin-template](https://github.com/JanWilczek/audio-plugin-template)
+
 ## 2023-12-21
+
+`~11p`
+
+[https://github.com/PixelRifts/c-codebase](https://github.com/PixelRifts/c-codebase)
+
+[https://craftinginterpreters.com/contents.html](https://craftinginterpreters.com/contents.html)
+
+[Wave 1: Intro & .wav Format - Mr. 4th Programming](https://www.youtube.com/watch?v=basbD6cukQw&list=PLT6InxK-XQvOJ7P9QFaEqE88n6RX9_Imz&index=1%5B)
 
 `11:57a` 
 
