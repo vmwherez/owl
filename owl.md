@@ -1,6 +1,114 @@
 # 🦉
 
-# 2023-12-22
+## 2023-12-25
+
+#### xmas.c (1998)
+
+```
+/*
+Least likely to compile successfully: <ian@unipalm.co.uk> Ian Phillipps 
+
+    Ian Phillipps
+    Cambridge Consultants Ltd
+    Science Park
+    Milton Road
+    Cambridge CB4 4DW
+    England
+
+Compile and run without parameters.
+
+The program is smaller than even the 'compressed' form of its output,
+and thus represents a new departure in text compression standards.
+
+The judges thought that this program looked like what you would get
+by pounding on the keys of an old typewriter at random.
+
+Copyright (c) 1988, Landon Curt Noll & Larry Bassel.
+All Rights Reserved.  Permission for personal, educational or non-profit use
+is granted provided this this copyright and notice are included in its entirety
+and remains unaltered.  All other uses must receive prior permission in
+writing from both Landon Curt Noll and Larry Bassel.
+*/
+
+#include <stdio.h>
+main(t,_,a)
+char
+*
+a;
+{
+        return!
+
+0<t?
+t<3?
+
+main(-79,-13,a+
+main(-87,1-_,
+main(-86, 0, a+1 )
+
+
++a)):
+
+1,
+t<_?
+main(t+1, _, a )
+:3,
+
+main ( -94, -27+t, a )
+&&t == 2 ?_
+<13 ?
+
+main ( 2, _+1, "%s %d %d\n" )
+
+:9:16:
+t<0?
+t<-72?
+main( _, t,
+"@n'+,#'/*{}w+/w#cdnr/+,{}r/*de}+,/*{*+,/w{%+,/w#q#n+,/#{l,+,/n{n+,/+#n+,/#;\
+#q#n+,/+k#;*+,/'r :'d*'3,}{w+K w'K:'+}e#';dq#'l q#'+d'K#!/+k#;\
+q#'r}eKK#}w'r}eKK{nl]'/#;#q#n'){)#}w'){){nl]'/+#n';d}rw' i;# ){nl]!/n{n#'; \
+r{#w'r nc{nl]'/#{l,+'K {rw' iK{;[{nl]'/w#q#\
+\
+n'wk nw' iwk{KK{nl]!/w{%'l##w#' i; :{nl]'/*{q#'ld;r'}{nlwb!/*de}'c ;;\
+{nl'-{}rw]'/+,}##'*}#nc,',#nw]'/+kd'+e}+;\
+#'rdq#w! nr'/ ') }+}{rl#'{n' ')# }'+}##(!!/")
+:
+t<-50?
+_==*a ?
+putchar(31[a]):
+
+main(-65,_,a+1)
+:
+main((*a == '/') + t, _, a + 1 )
+:
+
+0&#60;t?
+
+main ( 2, 2 , "%s")
+:*a=='/'||
+
+main(0,
+
+main(-61,*a, "!ek;dc i@bK'(q)-[w]*%n+r3#l,{}:\nuwloca-O;m
+.vpbks,fxntdCeghiry")
+
+,a+1);}
+
+```
+
+- https://udel.edu/~mm/xmas/
+- https://news.ycombinator.com/item?id=38745668
+
+## 2023-12-24
+
+https://www.musicdsp.org/en/latest/
+
+## 2023-12-23
+
+`1:17a` LVM is still compiling.
+
+`11:16a` `CTRL + W` and then `SHIFT + n` freezes the terminal buffer in `vim` for scrolling. 
+
+## 2023-12-22
 
 `10:30p` 
 
