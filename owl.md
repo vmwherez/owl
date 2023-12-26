@@ -1,5 +1,155 @@
 # 🦉
 
+## 2023-12-26
+
+`10:36a`
+
+#### `u` undo
+
+I'm already brushing up my personal docs on my `vim` config, at one point in a particular migration from Linux to Darwin BSD I lost `**-Z` undo. I have CUA mode on OS X, basically, except I have to use `control` instead of *`command`* to yank... so something about this discrepancy. In the meantime, `u` is undo in vanilla `vim`... 
+
+https://linuxize.com/post/vim-undo-redo/
+
+That said, a lot of things work for C with my current config which has been a pleasant suprise:
+
+#### VimPlug vs native plugin management...
+*I know I had switched to using mostly native plugin management. For some reason CoC worked better with VimPlug? I remember my comments and this is a very succinct vimrc, but it doesn't provide insight into other extensions.*
+
+```
+" Version .beta-new VIM 9 .vimrc 2023-04-05 nord
+
+" using Vim Plug
+call plug#begin('~/.vim/plugged')
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'rust-lang/rust.vim'
+
+
+
+call plug#end()
+
+
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+
+" basics
+syntax on
+" set number
+set mouse=a
+
+" copy and paste, select all, save
+vmap <C-c> "+y
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <ESC>"+pa
+nnoremap <C-a> ggVG
+nmap <c-s> :w<CR>
+imap <c-s> <Esc>:w<CR>
+
+" autoread and display outside changes from commands 
+set autoread
+
+" ?
+filetype plugin on
+set laststatus=2
+set backspace=indent,eol,start
+
+" color
+set termguicolors
+" colorscheme fogbell_light
+colorscheme nord
+" colorscheme monochrome
+
+" set new buffer split (like terminal) below
+set splitbelow
+
+
+" NERDtree 
+map <C-b> :NERDTreeToggle<CR>
+map <C-n> :term<CR>
+map <C-h> :Hexmode<CR>
+let NERDTreeShowHidden=1
+
+let g:airline#extensions#tabline#enabled = 1
+map <Tab> :bnext!<CR>
+
+" always put terminal below
+cnoremap term bel term
+
+```
+
+##### `vim` extensions
+
+*It's a little messy but it's light and it's working...*
+
+```sh
+(base) ➜  posix git:(main) cd ~/.vim/pack/plugins/start
+(base) ➜  start ls
+delimitMate            hexmode                nord-vim               vim-monochrome         vimspector
+fogbell.vim            nerdtree               vim-matrix-screensaver vim-python-ide         vimwiki
+(base) ➜  start cd ~/.vim/autoload
+(base) ➜  autoload ls
+plug.vim
+(base) ➜  autoload cd ~/.vim/plugged
+(base) ➜  plugged ls
+FastFold         black            ctrlp.vim        fzf              indentpython.vim vim-airline      vim-pydocstring  vimspector
+SimpylFold       coc.nvim         everforest       fzf.vim          nerdtree         vim-fugitive     vim-slime
+
+
+```
+
+After compiling LLVM I had a nagging feeling of wanting to get around to documenting my `vim` config (yet again), so this feels good.
+
+`9:51a`
+##### git
+Remove a file 
+```
+git rm <file>
+git commit --amend
+```
+
+#### collected links
+
+##### C
+
+https://en.wikibooks.org/wiki/C_Programming/Standard_libraries
+
+- [C Object Oriented Programming (2014)](https://nullprogram.com/blog/2014/10/21/)[HN Discussion](https://news.ycombinator.com/item?id=38708010)
+- [man vs info pages](https://social.jvns.ca/@b0rk/111607416578693170)[HN Discussion](https://news.ycombinator.com/item?id=38730528)
+	-  *I also didn't know about info pages until recently*
+- [100 lines of C in a closet](https://blog.notryan.com/009.txt)
+- [HN Discussion, stuff about C23](https://news.ycombinator.com/item?id=38729278)
+
+##### headphone preamp electronics
+
+- https://www.naughtycomputer.uk/do_i_really_need_to_get_out_the_soldering_iron_again.html
+##### Making Synthesized Sounds More Acoustic (Nathan Ho)
+
+- https://nathan.ho.name/posts/acoustic-sounds/
+- [HN Discussion](https://news.ycombinator.com/item?id=38708606)
+
+##### What is FM Synthesis
+
+> In some ways, we can think of the frequency modulation technique as having been discovered in 1933 by the engineer **Edwin Armstrong**—and since then it has been implemented for high-fidelity radio broadcasting worldwide. However, its clearest integration into the world of "commercial" synthesizer design begins with **Don Buchla's experimental modular synthesizer** systems, which he started developing in mid-1960s. In particular, the FM technique first appeared in his oscillators in the 100 Series—most clearly with the 158 Dual Sine/Sawtooth Generator and 144 Dual Square Wave Generator. These modules were dual oscillators, each of which offered an input for frequency modulation...typically connected between the two oscillators in a single module.
+
+*I used to play with a Rhodes 73 stage piano and a Yamaha DX-7 mkII, running both into a Roland SP-303. I had Yamaha direct-drive turntable as well, which I picked up from a local club's garage sale along with some vinyl, including the 12" of Soul || Soul's "Back to Life." I had a patch editor for the DX-7 which could save and store patches via SysEx, but before that I did use the two faders to program it. This would have been somewhere between 2000 and 2003. Mentioned here because I remember people commenting on programming the DX-7.*
+
+- [https://www.perfectcircuit.com/signal/what-is-fm-synthesis](https://www.perfectcircuit.com/signal/what-is-fm-synthesis) 
+- [HN discussion](https://news.ycombinator.com/item?id=38755388)
+
+
+
 ## 2023-12-25
 
 `~1a`
