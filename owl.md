@@ -3,7 +3,6 @@
 ## 2023-12-26
 
 `10:36a`
-
 #### `u` undo
 
 I'm already brushing up my personal docs on my `vim` config, at one point in a particular migration from Linux to Darwin BSD I lost `**-Z` undo. I have CUA mode on OS X, basically, except I have to use `control` instead of *`command`* to yank... so something about this discrepancy. In the meantime, `u` is undo in vanilla `vim`... 
@@ -109,7 +108,7 @@ SimpylFold       coc.nvim         everforest       fzf.vim          nerdtree    
 
 ```
 
-After compiling LLVM I had a nagging feeling of wanting to get around to documenting my `vim` config (yet again), so this feels good.
+After compiling [LLVM](https://llvm.org) I had a nagging feeling of wanting to get around to documenting my `vim` config (yet again), so this feels good.
 
 `9:51a`
 ##### git
