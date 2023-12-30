@@ -8,6 +8,8 @@
 
 `10:17p` Spent some time configuring ALE. Looked at the `stdio.h` in the Apple SDK. In the meantime, a bit of vimscript:
 
+`11:46p` https://stackoverflow.com/questions/21497857/difference-between-char-and-char-2 
+
 ```
 " Automatically run clang on save for C files 
 augroup clang_on_save 
@@ -15,6 +17,7 @@ augroup clang_on_save
 	autocmd BufWritePost *.c,*.h execute '!/usr/bin/clang -fsyntax-only ' . expand('%') 
 augroup END
 ```
+
 # 2023-12-27
 
 `7:03a`

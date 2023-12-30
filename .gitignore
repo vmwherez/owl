@@ -1,6 +1,7 @@
 # ignore PDFs and Kanban file
 kanban.md
 **/pdf/
+*.swp
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
