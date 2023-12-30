@@ -13,9 +13,9 @@
 
 - also CSV, xlsx
 
-#### Redis Cache 
+#### Redis Cache
 
-#### Websockets 
+#### Websockets
 
 #### Deployment & Scale
 
@@ -23,19 +23,13 @@
 
 #### Kubernetes
 
-Minikube 
+Minikube
 
-
-
-​	- Ansible??
+​ - Ansible??
 
 - postgres
 
 - NoSQL
-
-  
-
-
 
 ## ASGI: async Python
 
@@ -108,9 +102,9 @@ https://realpython.com/python-redis/
 
 ### Scaling and deployment
 
-In a single instance, one could use `gunicorn` in front of gunicorn. 
+In a single instance, one could use `gunicorn` in front of gunicorn.
 
-> If you have a cluster of machines with Kubernetes, Docker Swarm Mode, Nomad, or another similar complex system to manage distributed containers on multiple machines, then you will probably want to handle replication at the cluster level instead of using a process manager (like Gunicorn with workers) in each container. 
+> If you have a cluster of machines with Kubernetes, Docker Swarm Mode, Nomad, or another similar complex system to manage distributed containers on multiple machines, then you will probably want to handle replication at the cluster level instead of using a process manager (like Gunicorn with workers) in each container.
 
 - https://github.com/berndverst/falcon-docker
 - https://www.uvicorn.org/deployment/
@@ -123,13 +117,15 @@ In a single instance, one could use `gunicorn` in front of gunicorn.
 - https://pyo3.rs/v0.13.2/parallelism.html
 - https://stackoverflow.com/questions/60148992/running-python-code-in-parallel-from-rust-with-rust-cpython
 
-[[NOTES]] 
+[[notes]]
 
 [index.html](/)
 
-Math				
-[[MATH]]		
+Math
+[[MATH]]
+
 $$
 \int_{0}^{n}
 $$
+
 [microhooks](/microhooks)
