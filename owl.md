@@ -1,5 +1,26 @@
 # 🦉
 
+# 2023-12-29
+
+`7p` https://blog.sanctum.geek.nz/unix-as-ide-introduction/ 
+
+`8:18p` did this without thinking and wanted to note: `echo $PATH | grep $(which clang)`
+
+`10:17p` Spent some time configuring ALE. Looked at the `stdio.h` in the Apple SDK. In the meantime, a bit of vimscript:
+
+```
+" Automatically run clang on save for C files 
+augroup clang_on_save 
+	autocmd! 
+	autocmd BufWritePost *.c,*.h execute '!/usr/bin/clang -fsyntax-only ' . expand('%') 
+augroup END
+```
+# 2023-12-27
+
+`7:03a`
+
+https://www.ibm.com/docs/en/zos/2.3.0?topic=files-stdioh-standard-input-output
+Looks like a good resource from IBM. 
 ## 2023-12-26
 
 `10:36a`
