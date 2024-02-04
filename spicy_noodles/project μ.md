@@ -1,6 +1,6 @@
 > Adopted this name from `krj` to encompass all of the music and DSP things.
 > Music as a focal point to constrain the fields C++ and signal processing.
-> S
+> 
 > Specifically, µ introduces C (not C++) at the same time as the `*.wav` specification and other DSP concepts
 > 
 
