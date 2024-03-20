@@ -21,4 +21,8 @@ December 2023 reorganizing again:
 
 - PDFs are ignored. Code lives in projects: `sine`, `triangle`, `posix` and `peregrine` (private).
 
-  
+
+March 2024, shift to DSA and network engineering from DSP:
+
+- including Jupyter notebooks here to start, again this repo itself (Markdown and Jupyter) can be ingested by `peregrine` 
+
